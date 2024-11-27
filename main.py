@@ -13,3 +13,23 @@ try:
 except Exception as e:
     # Обробка можливих помилок під час роботи з файлом
     print(f"Виникла помилка під час запису у файл: {e}")
+
+
+# Відповідь та нове питання від другого студента
+
+first_student_surname = "Святішенко"
+answer_for_previous_question = "Список у Python — це змінний впорядкований контейнер для зберігання елементів будь-якого типу. Основні операції: створення, додавання, видалення, перебір"
+question_for_next_student = "Що таке кортеж у Python і чим він відрізняється від списку?"
+
+try:
+    # Відкриваємо файл для запису. Якщо файл не існує, він буде створений.
+    with open(file_name, 'a', encoding='utf-8') as file:
+        file.write(f"Студент: {first_student_surname}\n")
+        file.write(f"Відповідь: {answer_for_previous_question}\n")
+
+        file.write(f"Студент: {first_student_surname}\n")
+        file.write(f"Запитання: {question_for_next_student}\n")
+    print("Файл успішно змінено.")
+except Exception as e:
+    # Обробка можливих помилок під час роботи з файлом
+    print(f"Виникла помилка під час запису у файл: {e}")
